@@ -1,0 +1,14 @@
+<ul>
+    <div *ngFor="let course of courses | async">
+        <ngb-alert type="info" [dismissible]="false">
+            <h3>
+                <a href="#">{{course.name}}</a>
+            </h3>
+            <p>{{course.description}}</p>
+            <div>
+                {{course._id}} {{course.price}}
+            </div>
+            <a [routerLink]="['/details', course._id]" class="btn btn-success btn-lg btn-block">Más detalles</a>
+        </ngb-alert>
+    </div>
+</ul>

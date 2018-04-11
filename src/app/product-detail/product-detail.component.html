@@ -1,0 +1,9 @@
+<div *ngFor="let product of products | async">
+<div *ngIf="product._id==_id">
+  <h2>{{ product.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{product.price}}</div>
+  Unidades: <input type="number" [ngModel]="unidades">
+  <button class="btn btn-success" (click)="anadirCarrito(product)">Añadir al carrito</button>
+  <a href="/carrito" class="btn btn-warning" >Añadir al carrito</a>
+</div>
+</div>
